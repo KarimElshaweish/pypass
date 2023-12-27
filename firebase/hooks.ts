@@ -1,6 +1,7 @@
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut,
   updateProfile,
 } from "firebase/auth";
 import { FIREBASE_AUTH } from "./firebaseConfig";
@@ -85,6 +86,19 @@ export const useLogin = () => {
     } catch (err) {
       console.log(err);
     }
+  };
+};
+export const useLogout = () => {
+  const auth = FIREBASE_AUTH;
+  const nav = useAppNavation();
+  return () => {
+    signOut(auth)
+      .then(() => {
+        nav.navigate(ResourcesNamesList.AUTH);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 };
 export const useSelectFriebaseIsLoading = () =>

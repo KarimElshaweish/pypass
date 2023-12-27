@@ -9,6 +9,7 @@ import SuccessIcon from "../assets/icons/success";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import useAppNavation from "../navigation/useAppNavation";
 import { ResourcesNamesList } from "../types/types";
+import { useLogout } from "../firebase";
 const SettingOption = () => {
   return (
     <View style={styles.itemContainer}>
@@ -34,13 +35,15 @@ const BookingOption = () => {
   );
 };
 const LogoutSection = () => {
+  const logout = useLogout();
+  const onPress = () => logout();
   return (
-    <View style={styles.itemContainer}>
+    <TouchableOpacity style={styles.itemContainer} onPress={onPress}>
       <View style={styles.row}>
         <LogoutIcon />
         <Text style={styles.itemText}>Logout</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 const Options = () => {
