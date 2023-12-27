@@ -7,10 +7,11 @@ import {
   STORAGE_BUCKET,
   MESSAGNING_SENDER_ID,
   APP_ID,
+  FIREBASE_API_KEY,
 } from "@env";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBoSsErVWH1qUx9SqeiGYxjbfYuHvWg5Zw",
+  apiKey: FIREBASE_API_KEY,
   authDomain: AUTH_DOMAIN,
   databaseURL: DATA_BASE_URL,
   projectId: PROJECT_ID,

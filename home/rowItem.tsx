@@ -26,7 +26,6 @@ const RowItem = ({ hotel }: Props) => {
           ),
         }
       : require("../assets/default.jpeg");
-
   const onPress = () => nav.navigate(ResourcesNamesList.DESCRIPTIOM, { hotel });
   return (
     <TouchableOpacity style={styles.itemContianer} onPress={onPress}>

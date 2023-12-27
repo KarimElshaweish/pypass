@@ -2,7 +2,6 @@ import React from "react";
 import { FlatList } from "react-native";
 import { Hotel } from "../../types/types";
 import RowItem from "../rowItem";
-import { Button } from "@ui-kitten/components";
 import { useLoadRecommendHotels, useRecommendHotels } from "../hooks";
 
 const renderItem = ({ item }: { item: Hotel }) => <RowItem hotel={item} />;

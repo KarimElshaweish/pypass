@@ -17,7 +17,6 @@ const DescriptionCard = ({ hotel }: Props) => {
           uri: ComputeImageUrl(photo, 95, 95),
         }
       : require("../assets/default.jpeg");
-  console.log(user_ratings_total);
   return (
     <View style={styls.container}>
       <Image style={styls.img} source={computeImage} />

@@ -39,7 +39,6 @@ const Login = () => {
     }
   }, [firebaseError]);
 
-  console.log(firebaseError);
   return (
     <View style={styles.container}>
       <Spinner

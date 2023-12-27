@@ -15,7 +15,6 @@ type Action = SetTrendingAction;
 export default (state = initialState, action: Action) => {
   switch (action.type) {
     case TrendingHotelsAction.SET_TRENDING_HOTELS:
-      console.log("heloo22");
       return {
         ...state,
         hotels: action.hotels,
