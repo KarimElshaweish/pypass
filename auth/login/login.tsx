@@ -1,6 +1,12 @@
 import { Text } from "@ui-kitten/components";
 import React, { useEffect, useState } from "react";
-import { View, StyleSheet, TouchableOpacity, Alert } from "react-native";
+import {
+  StyleSheet,
+  TouchableOpacity,
+  Alert,
+  KeyboardAvoidingView,
+  Platform,
+} from "react-native";
 import { Colors, Dimisions } from "../../branding";
 import PasswordInput from "../passwordInput";
 import FiledInput from "../filedInput";
@@ -40,7 +46,10 @@ const Login = () => {
   }, [firebaseError]);
 
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+      style={styles.container}
+    >
       <Spinner
         visible={isLoading && !firebaseError}
         textContent={"Loading..."}
@@ -58,7 +67,7 @@ const Login = () => {
         <Text style={styles.forgetPassword}>Forgot Password?</Text>
       </TouchableOpacity>
       <BottomButton text="Login" onPress={onPress} />
-    </View>
+    </KeyboardAvoidingView>
   );
 };
 const styles = StyleSheet.create({

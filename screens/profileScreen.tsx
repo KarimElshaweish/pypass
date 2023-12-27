@@ -1,6 +1,7 @@
-import { Image, SafeAreaView, StyleSheet } from "react-native";
+import { ScrollView, StyleSheet } from "react-native";
 import React from "react";
 import { Dimisions } from "../branding";
+import { SafeAreaView } from "react-native-safe-area-context";
 import {
   InformationSection,
   Options,
@@ -11,10 +12,12 @@ import {
 const ProfileScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <ProfilePicture />
-      <InformationSection />
-      <RatingSection />
-      <Options />
+      <ScrollView>
+        <ProfilePicture />
+        <InformationSection />
+        <RatingSection />
+        <Options />
+      </ScrollView>
     </SafeAreaView>
   );
 };

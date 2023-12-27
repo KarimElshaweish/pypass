@@ -11,7 +11,7 @@ interface Props {
 }
 const BottomModal = ({ showingButtonText, children }: Props) => {
   const bottomSheetRef = React.useRef(null);
-  const snapPoints = ["70%"];
+  const snapPoints = ["80%"];
   const handlePresentModal = () => {
     bottomSheetRef.current.present();
   };

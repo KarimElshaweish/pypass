@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 import { Colors, Dimisions } from "../branding";
 import { Text } from "@ui-kitten/components";
 import { HomeTabs } from "../home";
@@ -8,6 +8,8 @@ import HonorIcon from "../assets/icons/honor";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import useAppNavation from "../navigation/useAppNavation";
 import { ResourcesNamesList } from "../types/types";
+import { SafeAreaView } from "react-native-safe-area-context";
+
 const HomeScreen = () => {
   const name = useCurrenUserName();
   const nav = useAppNavation();
@@ -39,6 +41,7 @@ const styles = StyleSheet.create({
     alignSelf: "flex-end",
     marginRight: Dimisions.sectionSpacing,
     marginBottom: Dimisions.sectionSpacing + Dimisions.primarySpacing,
+    marginTop: Dimisions.primarySpacing * 2,
   },
 });
 export default HomeScreen;

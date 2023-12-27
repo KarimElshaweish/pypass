@@ -1,12 +1,6 @@
 import { Button, Text } from "@ui-kitten/components";
 import React from "react";
-import {
-  SafeAreaView,
-  StyleSheet,
-  TextInput,
-  View,
-  useWindowDimensions,
-} from "react-native";
+import { StyleSheet, useWindowDimensions } from "react-native";
 import {
   NavigationState,
   SceneMap,
@@ -18,6 +12,8 @@ import { Colors, Dimisions } from "../branding";
 import LogoIcon from "../assets/icons/logo";
 import { Login } from "../auth";
 import Signup from "../auth/signup/signup";
+import { SafeAreaView } from "react-native-safe-area-context";
+
 interface TabNavigationData {
   key: string;
   title: string;

@@ -19,6 +19,7 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Provider } from "react-redux";
 import { store } from "./store";
 import ProfileScreen from "./screens/profileScreen";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 const Stack = createNativeStackNavigator();
 const getFonts = () =>
@@ -33,49 +34,51 @@ export default function App() {
   if (fontsloaded) {
     return (
       <Provider store={store}>
-        <GestureHandlerRootView style={{ flex: 1 }}>
-          <ApplicationProvider {...eva} theme={eva.dark}>
-            <NavigationContainer>
-              <Stack.Navigator
-                screenOptions={{
-                  contentStyle: styles.container,
-                }}
-                initialRouteName={ResourcesNamesList.ON_BOARDING}
-              >
-                <Stack.Screen
-                  name={ResourcesNamesList.ON_BOARDING}
-                  component={OnBoardingScreen}
-                  options={{ headerShown: false }}
-                />
-                <Stack.Screen
-                  name={ResourcesNamesList.AUTH}
-                  component={AuthScreen}
-                  options={{ headerShown: false }}
-                />
-                <Stack.Screen
-                  name={ResourcesNamesList.HOME}
-                  component={HomeScreen}
-                  options={{ headerShown: false }}
-                />
-                <Stack.Screen
-                  name={ResourcesNamesList.DESCRIPTIOM}
-                  component={DescriptipnScreen}
-                  options={{ headerShown: false }}
-                />
-                <Stack.Screen
-                  name={ResourcesNamesList.PROFILE}
-                  component={ProfileScreen}
-                  options={{ headerShown: false }}
-                />
-                <Stack.Screen
-                  name={ResourcesNamesList.BOOKING}
-                  component={BookingScreen}
-                  options={{ headerShown: false }}
-                />
-              </Stack.Navigator>
-            </NavigationContainer>
-          </ApplicationProvider>
-        </GestureHandlerRootView>
+        <SafeAreaProvider>
+          <GestureHandlerRootView style={{ flex: 1 }}>
+            <ApplicationProvider {...eva} theme={eva.dark}>
+              <NavigationContainer>
+                <Stack.Navigator
+                  screenOptions={{
+                    contentStyle: styles.container,
+                  }}
+                  initialRouteName={ResourcesNamesList.ON_BOARDING}
+                >
+                  <Stack.Screen
+                    name={ResourcesNamesList.ON_BOARDING}
+                    component={OnBoardingScreen}
+                    options={{ headerShown: false }}
+                  />
+                  <Stack.Screen
+                    name={ResourcesNamesList.AUTH}
+                    component={AuthScreen}
+                    options={{ headerShown: false }}
+                  />
+                  <Stack.Screen
+                    name={ResourcesNamesList.HOME}
+                    component={HomeScreen}
+                    options={{ headerShown: false }}
+                  />
+                  <Stack.Screen
+                    name={ResourcesNamesList.DESCRIPTIOM}
+                    component={DescriptipnScreen}
+                    options={{ headerShown: false }}
+                  />
+                  <Stack.Screen
+                    name={ResourcesNamesList.PROFILE}
+                    component={ProfileScreen}
+                    options={{ headerShown: false }}
+                  />
+                  <Stack.Screen
+                    name={ResourcesNamesList.BOOKING}
+                    component={BookingScreen}
+                    options={{ headerShown: false }}
+                  />
+                </Stack.Navigator>
+              </NavigationContainer>
+            </ApplicationProvider>
+          </GestureHandlerRootView>
+        </SafeAreaProvider>
       </Provider>
     );
   }

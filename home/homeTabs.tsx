@@ -71,6 +71,7 @@ const styles = StyleSheet.create({
   tabBar: {
     backgroundColor: Colors.background,
     marginTop: Dimisions.sectionSpacing * 2,
+    elevation: 0,
   },
   indicator: {
     backgroundColor: Colors.praimary,

@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { View, TouchableOpacity, StyleSheet, Alert } from "react-native";
+import {
+  TouchableOpacity,
+  StyleSheet,
+  Alert,
+  KeyboardAvoidingView,
+  Platform,
+} from "react-native";
 import FiledInput from "../filedInput";
 import PasswordInput from "../passwordInput";
 import { Text } from "@ui-kitten/components";
@@ -44,7 +50,10 @@ const Signup = () => {
     }
   }, [firebaseError]);
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView
+      style={styles.container}
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+    >
       <Spinner
         visible={isLoading}
         textContent={"Loading..."}
@@ -70,7 +79,7 @@ const Signup = () => {
       >
         <Text style={styles.signupTitle}>Sign Up</Text>
       </TouchableOpacity>
-    </View>
+    </KeyboardAvoidingView>
   );
 };
 const styles = StyleSheet.create({

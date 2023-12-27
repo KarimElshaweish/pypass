@@ -27,10 +27,9 @@ const BottomButton = ({ text, onPress, style, disabled = false }: Props) => {
 const styles = StyleSheet.create({
   container: {
     position: "absolute",
-    bottom: 0,
+    bottom: Dimisions.sectionSpacing * 3,
     alignSelf: "center",
     backgroundColor: Colors.praimary,
-    marginBottom: Dimisions.sectionSpacing,
     borderRadius: 20,
     paddingHorizontal: Dimisions.primarySpacing * 6,
     paddingVertical: Dimisions.secondrySpacing,

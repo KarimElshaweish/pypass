@@ -1,10 +1,9 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, View } from "react-native";
-import BackIcon from "../assets/icons/back";
-import { Text } from "@ui-kitten/components";
+import { StyleSheet } from "react-native";
 import { Colors, Dimisions } from "../branding";
 import { BackView } from "../generic";
 import { BookingList } from "../booking";
+import { SafeAreaView } from "react-native-safe-area-context";
 const BookingScreen = () => {
   return (
     <SafeAreaView>
