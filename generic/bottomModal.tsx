@@ -8,10 +8,11 @@ import { StyleSheet } from "react-native";
 interface Props {
   showingButtonText: string;
   children: React.ReactNode;
+  snap?: string;
 }
-const BottomModal = ({ showingButtonText, children }: Props) => {
+const BottomModal = ({ showingButtonText, children, snap = "80%" }: Props) => {
   const bottomSheetRef = React.useRef(null);
-  const snapPoints = ["80%"];
+  const snapPoints = [snap];
   const handlePresentModal = () => {
     bottomSheetRef.current.present();
   };
