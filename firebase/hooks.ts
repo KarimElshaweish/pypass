@@ -1,12 +1,11 @@
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  updateCurrentUser,
   updateProfile,
 } from "firebase/auth";
 import { FIREBASE_AUTH } from "./firebaseConfig";
 import { useDispatch, useSelector } from "react-redux";
-import { GlobalState, Resource, ResourcesNamesList } from "../types/types";
+import { GlobalState, ResourcesNamesList } from "../types/types";
 import { FirebaseActions } from "./state/reducer";
 import useAppNavation from "../navigation/useAppNavation";
 import { FirebaseError } from "firebase/app";

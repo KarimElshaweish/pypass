@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet } from "react-native";
 import BackIcon from "../assets/icons/back";
 import { Dimisions, Colors } from "../branding";
 import { Text } from "@ui-kitten/components";

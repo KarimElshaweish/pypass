@@ -4,10 +4,7 @@ import {
   BottomSheetModal,
 } from "@gorhom/bottom-sheet";
 import BottomButton from "./bottomButton";
-import { Colors } from "../branding";
-import { StyleSheet, View } from "react-native";
-import { Text } from "@ui-kitten/components";
-import RightArrowIcon from "../assets/icons/rightArrow";
+import { StyleSheet } from "react-native";
 interface Props {
   showingButtonText: string;
   children: React.ReactNode;

@@ -1,7 +1,6 @@
-import { Image, SafeAreaView, StyleSheet, Text, View } from "react-native";
-import React, { Component } from "react";
-import { Colors, Dimisions } from "../branding";
-import CamerIcon from "../assets/icons/camer";
+import { Image, SafeAreaView, StyleSheet } from "react-native";
+import React from "react";
+import { Dimisions } from "../branding";
 import {
   InformationSection,
   Options,

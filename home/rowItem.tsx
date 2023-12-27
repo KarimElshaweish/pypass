@@ -2,7 +2,7 @@ import React from "react";
 import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 import StartIcon from "../assets/icons/start";
 import useAppNavation from "../navigation/useAppNavation";
-import { GooglePhoto, Hotel, ResourcesNamesList } from "../types/types";
+import { Hotel, ResourcesNamesList } from "../types/types";
 import { Dimisions, Colors } from "../branding";
 import diminsion from "../branding/diminsion";
 import { Text } from "@ui-kitten/components";

@@ -1,10 +1,9 @@
 import React from "react";
 import DescriptionCard from "./descriptionCard";
 import { Text } from "@ui-kitten/components";
-import { StyleSheet, TouchableOpacity, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { Colors, Dimisions } from "../branding";
 import { BottomButton, BottomModal } from "../generic";
-import useAppNavation from "../navigation/useAppNavation";
 import { Calendar } from "react-native-calendars";
 import { MarkedDates, Theme } from "react-native-calendars/src/types";
 import RightArrowIcon from "../assets/icons/rightArrow";

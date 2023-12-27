@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import {
-  FIREBASE_API_KEY,
   AUTH_DOMAIN,
   DATA_BASE_URL,
   PROJECT_ID,

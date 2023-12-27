@@ -5,7 +5,6 @@ import { Colors, Dimisions } from "../../branding";
 import PasswordInput from "../passwordInput";
 import FiledInput from "../filedInput";
 import useAppNavation from "../../navigation/useAppNavation";
-import { ResourcesNamesList } from "../../types/types";
 import { BottomButton } from "../../generic";
 import {
   useFirebaseLoginError,
